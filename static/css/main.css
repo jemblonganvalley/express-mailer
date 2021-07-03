@@ -1,0 +1,101 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: ghostwhite;
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.container {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+  max-width: 500px;
+  background-color: white;
+  border: 1px dotted orange;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group input {
+  height: 40px;
+  padding: 0 8px;
+  border: 1px dotted gray;
+  font-family: inherit;
+  font-size: inherit;
+  color: gray;
+  font-weight: lighter;
+}
+
+input:focus {
+  outline: none;
+  border-right: 5px solid orange;
+}
+
+.form-group button {
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-notif {
+  height: 70px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-right: 5px solid greenyellow;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.2);
+}
