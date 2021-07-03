@@ -1,0 +1,10 @@
+### CREATE USER
+POST http://localhost:9000/api/user/create_user
+Content-Type: application/json
+
+{
+    "username" : "fadliselaz",
+    "email" : "fadliselaz@gmail.com",
+    "password" : "1qazxsw2",
+    "phone" : "08213655573"
+}
