@@ -24,5 +24,32 @@ user.post("/user/create_user", (req, res) => {
         })
 })
 
+user.post("/user/login", (req, res) => {
+    const data = req.body
+    User.findOne({
+        where: data,
+        attributes: ["id", "username", "email"]
+    })
+        .then(result => {
+            if (result) {
+                res.status(200).json({
+                    success: true,
+                    data: result
+                })
+            } else {
+                res.status(404).json({
+                    success: false,
+                    msg: "periksa kembali login anda.."
+                })
+            }
+        })
+        .catch(err => {
+            res.status(404).json({
+                success: false,
+                error: err
+            })
+        })
+})
+
 
 module.exports = user
